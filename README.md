@@ -1,2 +1,2 @@
 # ITC
-This repazitoria in homeworks
+This REPOSITORY in homeworks
