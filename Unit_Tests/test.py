@@ -3,7 +3,7 @@ import calculator
 
 class test_calc(unittest.TestCase):
     def test_divide(self):
-        self.assertEqual(calculator.divide(5, 3), 3)
+        self.assertEqual(calculator.divide(9, 3), 3)
         self.assertIsNone(calculator.divide(2, 0))
         self.assertEqual(calculator.divide(1, -1), -1)
 
