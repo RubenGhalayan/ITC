@@ -1,0 +1,7 @@
+.top, .bottom{
+    width: 100%;
+    background-color: #212121;
+    color:white;
+    padding: 10px 0;
+    text-align: center;
+}

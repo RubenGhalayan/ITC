@@ -1,0 +1,37 @@
+body {
+	width: 500px;
+}
+form {
+	background-color: #00969c;
+	text-align: center;
+	padding: 8px;
+	
+}
+
+#display {
+	width: 59%;
+	height: 30px;
+	text-align: left;
+	font-size: 20px;
+}
+.digit {
+	font-size: 15px;
+	background-color: #ffffff;
+	height: 55px;
+	width: 20%;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 5px;
+}
+.oper {
+	font-size: 20px;
+	background-color: #ffffff;
+	height: 55px;
+	width: 20%;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 5px;
+}
+#equal {
+	background-color: #ffffff;
+}

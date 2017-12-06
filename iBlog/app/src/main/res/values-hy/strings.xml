@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">iBlog</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="userName">Username</string>
+    <string name="userEmail">Email</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="my_profile">Անձնական էջ</string>
+    <string name="users">Օգտատերեր</string>
+    <string name="folowers">Հետևորդներ</string>
+    <string name="posts">Հրապարակումներ</string>
+    <string name="favorite_posts">Սիրելի գրառումներ</string>
+    <string name="favorites">Սիրելի օգտատերեր</string>
+    <string name="About_us">Մեր մասին</string>
+    <string name="language">Լեզու</string>
+    <string name="log_out">Դուրս գալ</string>
+    <string name="log_out_message">Վստահ եք, որ ցանկանում եք դուրս գալ:</string>
+    <string name="follow">Հետևել</string>
+    <string name="unfollow">Չհետևել</string>
+    <string name="yes">Այո</string>
+    <string name="no">Ոչ</string>
+    <string name="change">Փոխել</string>
+    <string name="avatar_image_not_found">Անձնանշանի նկարը չի գտնվել:</string>
+    <string name="image_not_found">Պատկերը չի հայտնաբերվել:</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_profile">iBlog</string>
+
+    <string name="email_address">Էլեկտրոնային հասցե</string>
+    <string name="password">Գաղտնաբառ</string>
+    <string name="log_in">Մուտք</string>
+    <string name="create_accaunt">Ստեղծել նոր էջ</string>
+    <string name="name">Անուն</string>
+    <string name="confirm_password">Հաստատել գաղտնաբառը</string>
+    <string name="register">Գրանցվել</string>
+    <string name="forgot_password">Մոռացել եք գաղտնաբառը?</string>
+    <string name="forgot_password_msg">Մուտքագրեք գրանցված էլեկտրոնային հասցեն՝ ծածկագիրը վերականգնելու համար․</string>
+    <string name="reset_password">ՎԵՐԱԿԱՆԳՆԵԼ ԳԱՂՏՆԱԲԱՌԸ</string>
+
+    <string name="age">Տարիք   </string>
+    <string name="age_">Տարիք -  </string>
+    <string name="cancel"> Չեղարկել </string>
+    <string name="ok"> Լավ </string>
+    <string name="not_picked_image"> Դուք նկար չեք վերցրել </string>
+    <string name="something_went_wrong"> Ինչ որ բան այնպես չգնաց </string>
+    <string name="not_upload_image">Պատկերը չի կարող վերբեռնել պահեստ:</string>
+    <string name="upload_successfully"> Վերբեռնվեց հաջող </string>
+    <string name="add_your_post"> Ավելացնել ձեր գրառումը </string>
+    <string name="post_successfuly_added"> Ձեր գրառումը հաջողությամբ ավելացվել է: </string>
+    <string name="select_picture"> Ընտրեք նկարը </string>
+    <string name="upload_done"> Վերբեռնումը կատարված է !!! </string>
+    <string name="post_text"> Հաղորդագրության տեքստը </string>
+    <string name="post_title"> Հաղորդագրության վերնագիր </string>
+    <string name="login_successfully"> Մուտքy հաջողված է </string>
+    <string name="invalid_email"> Էլփոստի անվավեր հասցե </string>
+    <string name="register_successfully"> Գրանցումը հաջողված է </string>
+    <string name="not_register"> Չհաջողվեց գրանցվել: Խնդրում եմ կրկին փորձեք. </string>
+    <string name="faild"> Նույնականացումը չհաջողվեց</string>
+    <string name="comment"> Թողնել մեկնաբանություն </string>
+    <string name="Nelli">Նելլի Մելքոնյան</string>
+    <string name="Khachik">Խաչիկ Ղազարյան</string>
+    <string name="Ruben">Ռուբեն Ղալայան</string>
+    <string name="Liana">Լիանա Անդրեասյան</string>
+    <string name="Smbat">Սմբատ Դալլաքյան</string>
+
+    <string name="password_required">Գաղտնաբառը պարտադիր է</string>
+    <string name="email_required">Էլեկտրոնային հասցեն պարտադիր է </string>
+    <string name="password_size">Գաղտնաբառը պետք է պարունակի նվազագույնը 6 նիշ</string>
+    <string name="confirm_required">Պարտադիր է կրկնել գաղտնագիրը</string>
+    <string name="password_dont_match"> Գաղտնաբառերը չեն համապատասխանում</string>
+    <string name="name_required">Անունը պարտադիր է</string>
+    <string name="age_required">Տարիքը պարտադիր է</string>
+
+
+</resources>

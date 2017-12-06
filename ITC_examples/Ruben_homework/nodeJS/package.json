@@ -1,0 +1,21 @@
+{
+  "lockfileVersion": 1,
+  "dependencies": {
+    "find": {
+      "integrity": "sha1-yGyHrxqxjyIrvjjeyGy8dg0Wpvs=",
+      "resolved": "https://registry.npmjs.org/find/-/find-0.1.7.tgz",
+      "version": "0.1.7"
+    },
+    "fs": "0.0.1-security",
+    "q": {
+      "integrity": "sha1-3QG6ydBtMObyGa7LglPunr3DCPE=",
+      "resolved": "https://registry.npmjs.org/q/-/q-1.5.0.tgz",
+      "version": "1.5.0"
+    },
+    "traverse-chain": {
+      "integrity": "sha1-YdvC1Ttp/2CRoSoWj9fUMxB+QPE=",
+      "resolved": "https://registry.npmjs.org/traverse-chain/-/traverse-chain-0.1.0.tgz",
+      "version": "0.1.0"
+    }
+  }
+}

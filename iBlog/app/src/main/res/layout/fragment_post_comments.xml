@@ -1,0 +1,68 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.itc.iblog.fragments.PostCommentsFragment"
+    android:background="#fff">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.tutsplus.mychatapp.MainActivity">
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@drawable/ic_send_black"
+            android:id="@+id/send"
+            android:tint="#ffffff"
+            android:background="#942f2f"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            app:fabSize="mini"
+            android:foregroundGravity="center"/>
+
+
+
+
+        <EditText
+            android:id="@+id/type_comment"
+            android:padding="10dp"
+            android:hint="@string/comment"
+            android:inputType="textMultiLine"
+            android:layout_toLeftOf="@id/send"
+            android:lines="2"
+            android:minLines="1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:gravity="top|left"
+            android:maxLines="10"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/dialog"
+            android:scrollbars="vertical" />
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/comment_recycler_view"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp"
+            android:divider="@android:color/transparent"
+            android:layout_marginBottom="70dp"/>
+    </RelativeLayout>
+
+</FrameLayout>

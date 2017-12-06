@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">iBlog</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="userName">Username</string>
+    <string name="userEmail">Email</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="my_profile">My Profile</string>
+    <string name="users">Users</string>
+    <string name="folowers">Followers</string>
+    <string name="posts">Posts</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorite_posts">Favorite Posts</string>
+    <string name="About_us">About Us</string>
+    <string name="language">Language</string>
+    <string name="log_out">Log Out</string>
+    <string name="log_out_message">Are you sure you want to log out?</string>
+    <string name="follow">Follow</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="change">Change</string>
+    <string name="avatar_image_not_found">Avatar image not found.</string>
+    <string name="image_not_found">Image not found.</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
+    <string name="reset_password">RESET PASSWORD</string>
+    <string name="iblog">iBLOG</string>
+
+    <string name="lang_dialog_title">Change language</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_profile">iBlog</string>
+    <string-array name="lang_select">
+        <item>English</item>
+        <item>Armenian</item>
+        <item>Russian</item>
+    </string-array>
+
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="create_accaunt">Create a new account ?</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+
+    <string name="age">Age   </string>
+    <string name="age_">Age -   </string>
+    <string name="cancel"> Cancel </string>
+    <string name="ok"> OK </string>
+    <string name="not_picked_image"> You haven not picked Image </string>
+    <string name="something_went_wrong"> Something went wrong </string>
+    <string name="not_upload_image">Can not upload image to the storage.</string>
+    <string name="upload_successfully"> Uploaded successfully. </string>
+    <string name="add_your_post"> Add your post </string>
+    <string name="post_successfuly_added"> Your post successfuly added. Please refresh to see it </string>
+    <string name="select_picture"> Select Picture </string>
+    <string name="upload_done"> Uploading Done!!! </string>
+    <string name="post_text"> Post Text </string>
+    <string name="post_title"> Post Title </string>
+    <string name="login_successfully"> Login successfully </string>
+    <string name="register_successfully"> Registered successfully </string>
+    <string name="not_register"> Could not register. Please try again. </string>
+    <string name="faild"> Authentication faild</string>
+    <string name="comment"> Type comment </string>
+    <string name="Nelli">Nelli Melkonyan</string>
+    <string name="Khachik">Khachik Ghazaryan</string>
+    <string name="Ruben">Ruben Ghalayan</string>
+    <string name="Liana">Liana Andreasyan</string>
+    <string name="Smbat">Smbat Dallakyan</string>
+    <string name="Nelli_mail">nelli.melkonyan.im@gmail.com</string>
+    <string name="Khachik_mail">khachik.ghazaryan.im@gmail.com</string>
+    <string name="Ruben_mail">ruben.ghalayan.im@gmail.com</string>
+    <string name="Liana_mail">liana.andreasyan.im@gmail.com</string>
+    <string name="Smbat_mail">smbat.dallakyan.im@gmail.com</string>
+    <string name="password_required">Password is required</string>
+    <string name="email_required">Email is required</string>
+    <string name="password_size">Password should contain minimum 6 symbols at last one letter and one number</string>
+    <string name="confirm_required">Confirm password is required</string>
+    <string name="password_dont_match">Passwords does not match</string>
+    <string name="name_required">Name is required</string>
+    <string name="age_required">Age is required</string>
+</resources>

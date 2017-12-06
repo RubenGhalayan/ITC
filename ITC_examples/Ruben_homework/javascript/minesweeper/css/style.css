@@ -1,0 +1,156 @@
+
+.enemy_field { 
+      width: 940px;
+      height: 940px;
+      float: left;
+      border: 1px solid black;
+      margin-left: 100px;
+    }
+#zx {
+	background-image: url(../imgs/zx.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+	backgruond-color: gray;
+
+}
+div{
+      width:45px;
+      height:45px;
+      border: 1px solid black;
+      float: left;
+    }
+
+.z1, .z11 {
+        background-image: url(../imgs/1.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+
+}
+.z2, .z22{
+        background-image: url(../imgs/2.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+
+}
+.z3, .z33{
+        background-image: url(../imgs/3.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+
+}
+.z4, .z44{
+        background-image: url(../imgs/4.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+
+}
+.z5, .z55{
+        background-image: url(../imgs/5.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+
+}
+.z6, .z66{
+        background-image: url(../imgs/6.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+
+}
+.z7, .z77{
+        background-image: url(../imgs/7.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+
+}
+.z8, .z88{
+        background-image: url(../imgs/8.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+
+}
+.w, .z0{
+        background-image: url(../imgs/0.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+
+}
+
+.z{
+      background-image: none;
+      background-color: purple;
+    }
+.dmg{
+       background-color: gray;
+        background-image: url(../imgs/bomb.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.s1, .s2, .s3, .s4{
+        background-color: gray;
+        background-image: url(../imgs/bomb.PNG);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .s1 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .z1 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .z2 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .z3 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+}
+.enemy_field .z4 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .z5 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .z6 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .z7 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .z8 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .w {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+.miss{
+        background-color: white;
+        background-image: url(../imgs/369208.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.main {
+        background-image: url(../imgs/369197.png);
+        background-repeat: no-repeat;
+        background-position: center;
+
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Services</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src = "app.js"></script> 
+        <script src = "services.js"></script> 
+        <script src = "controller.js"></script> 
+    </head>
+
+    <body>
+        <div ng-app="serviceApp" ng-controller="serviceCtrl" >
+            <h1>Service result:</h1>
+            <h3>Max of 5 and 8 is: {{maxServ(5, 8)}}</h3>
+            <h1>Factory result:</h1>
+            <h3>Max of 6 and 9 is: {{maxFact(6, 9)}}</h3>
+            <h1>Provider result:</h1>
+            <h3>Max of 7 and 10 is: {{maxProv(7, 10)}}</h3>
+        </div>
+    </body>
+</html>
+

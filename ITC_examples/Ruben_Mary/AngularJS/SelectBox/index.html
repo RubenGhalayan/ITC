@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="app.js"></script>
+        <script src="controller.js"></script>
+    </head>
+
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <h2>IMForms project members:</h2>
+            <select ng-init="selectedPerson = people[0]" ng-model="selectedPerson" ng-options="y.name for (x, y) in people">
+                <option value="">Select Name</option> 
+            </select>
+            <h2>Name: {{selectedPerson.name}}</h2>
+            <h3>Surname: {{selectedPerson.surname}}</h3>
+            <h3>Age: {{selectedPerson.age}}</h3>
+        </div>
+    </body>
+</html>

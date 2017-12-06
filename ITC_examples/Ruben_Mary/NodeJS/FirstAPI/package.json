@@ -1,0 +1,28 @@
+{
+  "name": "firstapi",
+  "version": "1.0.0",
+  "description": "ITC 8 first rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Armenuhi-Qocharyan/ITC-8.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "itc8"
+  ],
+  "author": "ITC8",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Armenuhi-Qocharyan/ITC-8/issues"
+  },
+  "homepage": "https://github.com/Armenuhi-Qocharyan/ITC-8#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}

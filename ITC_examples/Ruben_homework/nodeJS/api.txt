@@ -1,0 +1,18 @@
+curl -v -X POST "http://localhost:3000/db/register" --data '{"name":"name", "email": "email", "password": "password"}' -H "content-type: application/json"
+res.send({register: true(false)})
+
+curl -v -X POST "http://localhost:3000/db/login" --data '{"name":"name", "password": "password"}' -H "content-type: application/json"
+res.send({login: true(false)})
+
+curl -v -X POST "http://localhost:3000/db/forms" --data '{"fullname": "<div>fullname</div>", "email": "<div>email</div>"}' -H "content-type: application/json"
+res.send({form: true(false)})
+
+curl -v -X GET "http://localhost:3000/db/forms/username"
+res.send({"fullname": "<div>fullname</div>", "email": "<div>email</div>"})
+
+curl -v -X POST "http://localhost:3000/db/form-field" --data '{"fullname": "name", "email": "example@mail.ru"}' -H "content-type: application/json"
+res.send({form-field: true(false)})
+
+curl -v -X GET "http://localhost:3000/db/form-field/username"
+res.send({"fullname": "name", "email": "example@mail.ru"})
+

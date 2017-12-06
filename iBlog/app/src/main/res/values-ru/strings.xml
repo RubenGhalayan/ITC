@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="userName">Username</string>
+    <string name="userEmail">Email</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="my_profile">Моя страница</string>
+    <string name="users">Пользователи</string>
+    <string name="folowers">Подписчики</string>
+    <string name="posts">Лента</string>
+    <string name="favorites">Избранные</string>
+    <string name="favorite_posts">Избранные посты</string>
+    <string name="About_us">О нас</string>
+    <string name="language">Язык</string>
+    <string name="log_out">Выйти</string>
+    <string name="log_out_message">Вы действительно хотите выйти?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="change">Изменить</string>
+    <string name="avatar_image_not_found">Изображение аватара не найдено. </string>
+    <string name="image_not_found"> Изображение не найдено.</string>
+
+    <string name="lang_dialog_title">Поменять язык</string>
+
+    <string name="email_address">Адрес электронной почты</string>
+    <string name="password">Пароль</string>
+    <string name="log_in">Войти</string>
+    <string name="create_accaunt">Создать новую учетную запись ?</string>
+    <string name="name">Имя</string>
+    <string name="confirm_password">Подтвердить пароль</string>
+    <string name="register">Зарегистрировать</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="forgot_password_msg">Нам нужен ваш зарегистрированный адрес электронной почты, чтобы отправить вам инструкции по сбросу пароля.</string>
+    <string name="reset_password">СБРОС ПАРОЛЯ</string>
+
+    <string name="age">Возраст   </string>
+    <string name="age_">Возраст -  </string>
+    <string name="cancel"> Отменить </string>
+    <string name="ok"> OK </string>
+    <string name="not_picked_image"> Вы не выбрали изображение </string>
+    <string name="something_went_wrong"> Что-то пошло не так </string>
+    <string name="not_upload_image">Невозможно загрузить изображение в хранилище.</string>
+    <string name="follow">Следовать</string>
+    <string name="unfollow">Неследовать</string>
+    <string name="upload_successfully"> Загружено успешно. </string>
+    <string name="add_your_post"> Добавить сообщение  </string>
+    <string name="post_successfuly_added"> Ваш пост успешно добавлен. </string>
+    <string name="select_picture"> Выбрать изображение </string>
+    <string name="upload_done"> Загрузка завершена !!!  </string>
+    <string name="post_text"> Опубликовать текст </string>
+    <string name="post_title"> Опубликовать заголовок </string>
+    <string name="login_successfully"> Войти успешно </string>
+    <string name="email_required"> Требуется электронная почта </string>
+    <string name="invalid_email"> Недействительный адрес электронной почты  </string>
+    <string name="register_successfully"> Зарегистрировано успешно </string>
+    <string name="not_register"> Не удалось зарегистрировать. Пожалуйста, попробуйте еще раз. </string>
+    <string name="faild">Oшибка аутентификации</string>
+    <string name="comment"> комментарий </string>
+    <string name="Nelli">Нелли Мелконян</string>
+    <string name="Khachik">Хачик Казарян</string>
+    <string name="Ruben">Рубен Галаян</string>
+    <string name="Liana">Лиана Андреасян</string>
+    <string name="Smbat">Смбат Даллаякян</string>
+    <string name="password_required"> Требуется пароль</string>
+    <string name="password_size"> Пароль должен содержать минимум 6 символов, в конце концов, одну букву и одно число</string>
+    <string name="confirm_required">Требуется подтверждение пароля </string>
+    <string name="password_dont_match">Пароли не соответствуют</string>
+    <string name="name_required">Требуется имя </string>
+    <string name="age_required">Требуется возраст</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_weight="0.25"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        app:srcCompat="@drawable/instigate_logo" />
+
+    <TextView
+        android:id="@+id/itc_tel"
+        android:layout_weight="0.1"
+        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:textSize="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:text=" +374 (60) 44 55 00"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/about_us_rv"
+        android:layout_weight="0.65"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</LinearLayout>

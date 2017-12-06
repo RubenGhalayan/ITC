@@ -1,0 +1,9 @@
+anun1 azganun1 19
+anun2 azganun2 18
+anun3 azganun3 17
+anun4 azganun4 16
+anun5 azganun5 15
+anun6 azganun6 17
+anun7 azganun7 19
+anun8 azganun8 12
+anun9 azganun9 11

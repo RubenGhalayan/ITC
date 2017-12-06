@@ -1,0 +1,72 @@
+.player_field { 
+      width: 470px;
+      height: 470px;
+      float: left;
+      border: 1px solid black;
+    }
+
+.enemy_field { 
+      width: 470px;
+      height: 470px;
+      float: left;
+      border: 1px solid black;
+      margin-left: 100px;
+    }
+div{
+      width:45px;
+      height:45px;
+      border: 1px solid black;
+      float: left;
+    }
+.w{
+      background-image: url(../imgs/369197.png);
+    }
+
+.s{
+      background-color: gray;
+    }
+
+.z{
+      background-image: url(../imgs/369197.png);
+    }
+.dmg{
+        background-color: red;
+    }
+.s1, .s2, .s3, .s4{
+        background-color: gray;
+        background-image: url(../imgs/369220.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .s1 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .s2 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .s3 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.enemy_field .s4 {
+        background-image: url(../imgs/369197.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.miss{
+        background-color: white;
+        background-image: url(../imgs/369208.png);   
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+.main {
+        background-image: url(../imgs/369197.png);
+        background-repeat: no-repeat;
+        background-position: center;
+
+}

@@ -1,0 +1,141 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.itc.iblog.fragments.LoginFragment">
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_img"
+        android:paddingBottom="2dp">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="50dp"
+            tools:context=".activities.MainActivity">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:text="iBLOG"
+                    android:textAlignment="gravity"
+                    android:textColor="#fff"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width = "fill_parent"
+                    android:layout_height = "50dp"
+                    android:id = "@+id/editText"
+                    android:hint = "@string/email_address"
+                    android:height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/edit_text"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:textColor="#fff"
+                    android:textColorHighlight="#fff"
+                    android:textColorHint="#fff" />
+
+
+                <EditText
+                    android:layout_width = "fill_parent"
+                    android:layout_height = "50dp"
+                    android:id = "@+id/editText2"
+                    android:hint = "@string/password"
+                    android:padding="10dp"
+                    android:inputType = "textPassword"
+                    android:height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/edit_text"
+                    android:focusable="true"
+                    android:textColor="#fff"
+                    android:textColorHighlight="#fff"
+                    android:textColorHint="#fff" />
+
+
+                <Button
+                    android:layout_width = "fill_parent"
+                    android:layout_height = "50dp"
+                    android:id = "@+id/buttonLogin"
+                    android:text="@string/log_in"
+                    android:textColor="#000"
+                    android:padding="10dp"
+                    android:height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/edit_text"
+                    android:backgroundTint="#fff"
+                    android:focusable="true"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="27dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:state_focused="true"
+                    android:state_pressed="true"
+                    android:text="@string/create_accaunt"
+                    android:textAlignment="gravity"
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/forgot"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="2dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:state_focused="true"
+                    android:state_pressed="true"
+                    android:text="@string/forgot_password"
+                    android:textAlignment="gravity"
+                    android:textColor="#fff"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar_cyclic_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:minWidth="50dp"
+                android:theme="@style/ProgressBar"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</FrameLayout>

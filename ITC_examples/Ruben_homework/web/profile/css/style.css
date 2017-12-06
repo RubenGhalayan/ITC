@@ -1,0 +1,14 @@
+#side {
+    padding-top: 10%;
+    color: #222;
+}
+
+#side_break {
+    border-top-color: #aaa;
+    border-bottom: none;
+}
+#vertical_menu_bar {
+    background-color: #ddd;
+    padding-bottom: 150%;
+}
+
