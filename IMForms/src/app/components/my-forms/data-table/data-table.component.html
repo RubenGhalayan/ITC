@@ -1,0 +1,33 @@
+<md-paginator style="display: block; padding: 0" [pageSize]="itemsPerPage" [pageSizeOptions]=pages (page)="pageEvent = $event;  onChangeTable(config, {page: page, itemsPerPage: pageEvent.pageSize })">
+</md-paginator>
+<div class="data-table" #table>
+    <table *ngIf="rows.length > 0" class="table table-hover table-striped table-bordered" style="width: auto; flex: 1">
+        <thead>
+            <tr>
+                <th class="unselectable">Select</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 15px; text-align: center">
+                    <md-checkbox (change)="changeAll()" [checked]="data.length == formService.getSelected().length"></md-checkbox>
+                </td>
+            </tr>
+            <tr *ngFor="let row of rows">
+                <td style="text-align: center">
+                    <md-checkbox (change)="changed(row)" [checked]="checked(row)"></md-checkbox>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-table   [config]="config" class="unselectable" (tableChanged)="onChangeTable(config)" [rows]="rows" [columns]="columns"
+        (cellClicked)="onCellClick($event.row)">
+    </ng-table>
+</div>
+
+<app-pop-up></app-pop-up>
+
+<pagination *ngIf="config.paging" class="pagination-sm" [(ngModel)]="page" [totalItems]="length" [itemsPerPage]="itemsPerPage"
+    [maxSize]="maxSize" [boundaryLinks]="true" [rotate]="false" (pageChanged)="onChangeTable(config, $event); pageEvent = $event "
+    (numPages)="numPages = $event">
+</pagination>

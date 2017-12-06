@@ -1,0 +1,98 @@
+<div>
+    <h5 class="titleForm unselectable">Generate Schedule</h5>
+    <hr>
+
+    <md-dialog-content >
+        <label>Criteries</label>
+        <br>
+        <div class="btn-group" dropdown [isOpen]="activated" (isOpenChange)="changeState($event)">
+            <button  (click)="toggleDropdown($event)"  dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+                Add critery
+                <span class="caret"></span>
+            </button>
+            <ul *dropdownMenu class="dropdown-menu" role="menu">
+                <li role="menuitem form-control" *ngFor="let critery of criteries" (click)="selectedCritery(critery)"><a class="dropdown-item" >{{ critery }}</a>
+                </li>
+            </ul>
+        </div>
+        <div [dragula]='"another-bag"' id='select' [dragulaModel]='selected' class='criteries'>
+            <div *ngFor="let one of selected " class="critery unselectable">
+                <div class="critery_label"><span class="glyphicon glyphicon-remove close" (click)="deselectedCritery(one)"></span> {{ one }}</div>
+            </div>
+        </div>
+        <md-checkbox [(ngModel)]="checked" (change)='updateGroups()' [disabled]="!labels['date'] && !labels['time']">Sort by prefered time</md-checkbox>
+        <div class='meetings'>
+            <label for='meetings'>Meetings per hour</label>
+            <input type='number' onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57"  [(ngModel)]='meetings' id='meetings' min=0 class='form-control' (input)='updateGroups()' />
+        </div>
+        <div *ngIf="selected.length > 0">
+            <label class='preview'>Preview</label>
+            <md-slide-toggle class="switch" labelPosition="before" (change)="onChange($event)">Card View</md-slide-toggle>
+        </div>
+        <div *ngIf="!times[0]">
+            <md-list *ngIf="isListView && selected.length > 0">
+                <div *ngFor="let group of groups | keys let i = index">
+                    <h1 mdSubheader class="mat-subheader" contenteditable=true [(contenteditableModel)]="keys[i]"> Group {{i + 1 }} {{ dates[i]}}</h1>
+
+                    <div [dragula]='"first-bag"' id="container" [dragulaModel]='groups[i]'>
+                        <md-list-item class='list-item' *ngFor='let item of groups[group.key]' id='draggable'>
+                            <p class='unselectable' [ngClass]="{'alert-warning': okTime(item['date'], dates[i]) }">{{ item[labels['name']?.firstName.label] }} {{ item[labels['name']?.lastName.label] }}</p>
+                        </md-list-item>
+                    </div>
+                    <md-divider></md-divider>
+                </div>
+            </md-list>
+
+        <div class="flex-container" *ngIf="selected.length > 0">
+            <div *ngFor="let group of groups | keys let i = index">
+                <md-card *ngIf="!isListView">
+                    <md-card-title contenteditable=true  [(contenteditableModel)]="keys[i]"> Group {{ i + 1 }} {{ dates[i]}} </md-card-title>
+                    <md-card-content class='card-content' [dragula]='"first-bag"' id="container" [dragulaModel]='groups[group.key]'>
+                         <div *ngFor="let item of groups[group.key]">
+                             <p  class="unselectable mat-card-item" [ngClass]="{'alert-warning': okTime(item['date'], dates[i]) }">{{ item[labels['name']?.firstName.label] }}     {{ item[labels['name']?.lastName.label]}}</p>
+                          </div>
+                    </md-card-content>
+                </md-card>
+              </div>
+        </div>
+        </div>
+
+        <div *ngIf="times[0]">
+            <md-list *ngIf="isListView" class='unselectable'>
+                <div *ngFor="let group of groups | keys let i = index">
+                    <h1 mdSubheader class="mat-subheader" contenteditable=true [(contenteditableModel)]="keys[i]"> Group {{ i + 1 }} {{ group.key }}</h1>
+                    <div>
+                        <md-card-content *ngFor='let item of groups[group.key]  | keys let i = index'>
+                            <label  class='time'  #dontDrag> {{ item.key }}</label>
+                            <div class='mat-list-item' [dragula]='"first-bag "' [dragulaModel]='groups[group.key][item.key]'>
+                                <p class='list-item unselectable' [ngClass]="{'alert-warning': okTime(time['date'], group.key) || okTime(time['time'], item.key) }" id='draggable'  *ngFor='let time of groups[group.key][item.key] '> {{ time[labels['name']?.firstName.label] }}  {{ time[labels['name']?.lastName.label] }} </p>
+                            </div>
+                        </md-card-content>
+                    </div>
+                    <md-divider></md-divider>
+                </div>
+            </md-list>
+
+        <div class="flex-container" *ngIf="selected.length > 0">
+            <div *ngFor="let group of groups | keys let i = index">
+                <md-card *ngIf="!isListView" style="margin-bottom: 20px;">
+                    <md-card-title contenteditable=true [(contenteditableModel)]="keys[i]"> Group {{ i + 1 }} {{ group.key }} </md-card-title>
+                    <div class="card-content">
+                    <md-card-content *ngFor='let item of groups[group.key] | keys let i = index'>
+                            <label class="time" #dontDrag> {{ item.key }}</label>
+                            <div [dragula]='"first-bag "' id="container" [dragulaModel]='groups[group.key][item.key]'>
+                                <p class='mat-card-item unselectable' [ngClass]="{'alert-warning': okTime(time['date'], group.key) || okTime(time['time'], item.key) }" id='draggable'  *ngFor='let time of groups[group.key][item.key] '> {{ time[labels['name']?.firstName.label] }}  {{ time[labels['name']?.lastName.label] }} </p>
+                            </div>
+                    </md-card-content>
+                    </div>
+                </md-card>
+            </div>
+        </div>
+        </div>
+    </md-dialog-content>
+    <md-dialog-actions class="pull-right actions">
+         <app-pop-up></app-pop-up>
+        <button md-button class="btn btn-default-alter " md-dialog-close tabindex="-1 ">Cancel</button>
+        <button class="btn btn-primary " (click)="onGenerate()" tabindex="1 " [disabled]="keys.length === 0">Generate</button>
+    </md-dialog-actions>
+</div>

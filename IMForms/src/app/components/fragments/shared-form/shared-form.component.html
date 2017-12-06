@@ -1,0 +1,25 @@
+<h5 md-dialog-title class="titleForm unselectable">{{ title }}</h5>
+<hr>
+<div class="container">
+  <div *ngIf="component !== 1" class="input-field">
+    <div *ngFor="let item of selected">
+      <div class="selected">
+        <span>{{item}}</span>
+        <a (click)="remove(item)">x</a>
+      </div>
+    </div>
+    <textarea type="text" class="validate filter-input form-control" placeholder="Enter email addresses" [(ngModel)]=query (keyup)=filter()></textarea>
+  </div>
+  <div class="mail-box" *ngIf="filteredList.length > 0">
+    <div *ngFor="let item of filteredList">
+      <a (click)="select(item)">{{item}}</a>
+    </div>
+  </div>
+  <textarea type="text" #subject class="form-control" placeholder="Add a email subject"></textarea>
+  <textarea type="text" #message class="mail-input form-control" placeholder="Add a note"></textarea>
+  <md-dialog-actions class="pull-right">
+    <button class="btn btn-default" md-dialog-close>Cancel</button>
+    <button *ngIf="!component" class="btn btn-default" [md-dialog-close]="selected.length" (click)="share(message.value, subject.value)" [disabled]="!selected.length">Share</button>
+    <button *ngIf="component" class="btn btn-default" [md-dialog-close]="selected.length" (click)="send(message.value, subject.value)" [disabled]="!subject.value || !selected.length || !message.value">Send</button>
+  </md-dialog-actions>
+</div>

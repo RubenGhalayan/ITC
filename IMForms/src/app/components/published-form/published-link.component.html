@@ -1,0 +1,17 @@
+<p class="title unselectable">Publish {{ title }} Form</p>
+<hr>
+<md-dialog-content class="content">
+    <p class="unselectable">Your form will be published at this address.</p>
+    <div class="input-group">
+        <span class="input-group-addon glyphicon glyphicon-link"></span>
+        <input type="text" class="form-control" [(ngModel)]='url' id='copy' readonly>
+        <span class="input-group-btn">
+            <button class="btn btn-primary" type="button" (click)='copyToClipboard()'>Copy link</button>
+        </span>
+    </div>
+    <p class="unselectable" style="margin-top: 20px">After publishing You can find your form in 'my forms' page</p>
+</md-dialog-content>
+<md-dialog-actions class="pull-right">
+    <button md-button class="btn btn-default-alter" md-dialog-close tabindex="-1">Cancel</button>
+    <button class="btn btn-primary" [md-dialog-close]="true" tabindex="1">Publish</button>
+</md-dialog-actions>

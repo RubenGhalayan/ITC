@@ -1,0 +1,120 @@
+@import "../../../../assets/styles/bootstrap-custom/custom-variables.less";
+.change {
+    position: absolute;
+    width: calc(~"100vw + 15px");
+}
+
+#first-row {
+    background-color: @brand-primary;
+    background: -webkit-linear-gradient(lighten(#288d90, 15%) 40%, #288d90);
+    background: -o-linear-gradient(lighten(#288d90, 15%) 40%, #288d90);
+    background: -moz-linear-gradient(lighten(#288d90, 15%) 40%, #288d90);
+    background: linear-gradient(lighten(#288d90, 15%) 40%, #288d90);
+    background-size: cover;
+    margin-right: 0%;
+    color: #ffffff;
+    font-size: @font-size-base * 4;
+    font-family: arial;
+    min-width: 308px;
+    box-shadow: 5px 8px 20px 0 rgba(40, 42, 45, 0.4), 0 6px 20px 0 rgba(60, 60, 60, 0.19);
+}
+
+.profile {
+    display: flex;
+    right: 15px;
+    float: right;
+    position: absolute;
+}
+
+#right-text {
+    font-size: @font-size-h4;
+    padding-top: 38px;
+}
+
+#right-text-mobile {
+    font-size: @font-size-base;
+    padding-top: 27px;
+    float: right;
+}
+
+#profile-pic {
+    padding-left: 10px;
+}
+
+#imforms {
+    font-size: @font-size-title;
+    padding: 0 0 5px 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+#imforms-login {
+    font-size: @font-size-title;
+    padding: 0 0 5px 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+#imforms-mobile {
+    display: inline;
+    font-size: @font-size-title-xs;
+    padding: 0 0 5px 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropdown {
+    display: inline-block;
+    float: left;
+}
+
+.dropdown>img {
+    border-radius: 50px;
+    width: 50px;
+    margin-top: 20px;
+}
+
+#img-mobile {
+    border-radius: 50px;
+    width: 45px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.btn-change {
+    background-color: @gray-dark;
+    color: #EAEAEA;
+}
+
+.btn-change:hover {
+    color: white;
+    background-color: @brand-primary;
+}
+
+.dropdown-content {
+    display: none;
+    right: 2px;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hamburger-title {
+    display: flex;
+}
+
+.hamburger {
+    font-size: @font-size-h3;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .dropdown-content {
+    top: 55px;
+  } 
+
+}

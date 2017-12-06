@@ -1,0 +1,129 @@
+<div class="out" id="source" *ngIf="getData()">
+    <md-dialog-content *ngIf="data.content">
+        <div class="row flex-container unselectable dialog-content">
+            <div class="col-sm-3 info" [ngStyle]="{height : matchHeight()}" #left>
+                <img width="100" height="100" [src]="image ? image : '../../../../assets/avatar.jpg'" class="img-responsive img-circle center-block " />
+                <h5 class="text-center " *ngIf='labels.firstName'>
+                    <b>{{ getData()[labels.firstName[0]] }} {{ getData()[labels.lastName[0]] }}</b>
+                </h5>
+                <h4>Info</h4>
+                <hr>
+                <div *ngIf="labels.email " class="sector ">
+                    <dl class="glyphicon glyphicon-envelope element ">
+                        <b> {{labels.email[0] }}</b>
+                    </dl>
+                    <dt class="description " *ngFor="let email of labels.email ">
+                        <i> {{ getData()[email] }}</i>
+                    </dt>
+                </div>
+                <div *ngIf="labels.phone " class="sector ">
+                    <dl class="glyphicon glyphicon-phone element ">
+                        <b> {{labels.phone }}</b>
+                    </dl>
+                    <dt *ngFor="let phone of labels.phone " class="description ">
+                        <i> {{ getData()[phone] }}</i>
+                    </dt>
+                </div>
+                <div *ngIf="labels.birthday " class="sector ">
+                    <dl class="glyphicon glyphicon-gift element ">
+                        <b> {{labels.birthday }}</b>
+                    </dl>
+                    <dt *ngFor='let birthday of labels.birthday' class="description ">
+                        <i> {{ getData()[birthday] | date:'shortDate'}} </i>
+                    </dt>
+                </div>
+                <div *ngIf="labels.status " class="sector ">
+                    <dl class="glyphicon glyphicon-gift element ">
+                        <b> {{labels.status }}</b>
+                    </dl>
+                    <dt *ngFor='let status of labels.status' class="description ">
+                        <i> {{ getData()[status] }}</i>
+                    </dt>
+                </div>
+                <div *ngIf="labels.country " class="sector ">
+                    <dl class="glyphicon glyphicon-home element ">
+                        <b> Address </b>
+                    </dl>
+                    <dt class="description "> {{ labels.country }}:
+                        <i> {{ getData()[labels.country] }}</i>
+                    </dt>
+                    <dt class="description "> {{ labels.city }}:
+                        <i> {{ getData()[labels.city] }}</i>
+                    </dt>
+                    <dt class="description "> {{ labels.address }}:
+                        <i> {{ getData()[labels.address] }}</i>
+                    </dt>
+                </div>
+            </div>
+            <div class="col-sm-8 data " #right>
+                <div class="col-sm-12 sector " *ngIf="getData().EducationComponent ">
+                    <span class="glyphicon glyphicon-education element-title ">
+                        <b> Education</b>
+                    </span>
+                    <hr>
+                    <div class="flex-container col-sm-12 " *ngFor="let education of getData().EducationComponent ">
+                        <div class="col-sm-4 ">
+                            <i>
+                                <b>{{education[labels.edustart]}} - {{education[labels.eduend]}}</b>
+                            </i>
+                        </div>
+                        <div class="col-sm-8 ">
+                            <p>
+                                <b> {{education[labels.university]}}, {{education[labels.faculty]}} </b>
+                            </p>
+                            <p> {{education[labels.educountry]}}, {{education[labels.educity]}}</p>
+                            <p> {{education[labels.degree]}}</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-sm-12 sector " *ngIf="getData().SkillsComponent ">
+                    <span class="glyphicon glyphicon-sunglasses element-title ">
+                        <b> Skills </b>
+                    </span>
+                    <hr>
+                    <div class="flex-container col-sm-12 " *ngFor="let skills of getData().SkillsComponent ">
+                        <label> {{ skills[labels.name] }} </label>
+                        <div class="progress ">
+                            <div class="progress-bar progress-bar-primary label-range " role="progressbar " [ngStyle]="{ 'width': (skill.indexOf(skills[labels.range]) + 1) * 20 + '%'} ">
+                                {{skills[labels.range]}}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 sector " *ngIf="getData().WorkExperienceComponent ">
+                    <span class="glyphicon glyphicon-briefcase element-title ">
+                                <b> Work Experience</b>
+                            </span>
+                    <hr>
+                    <div class="flex-container col-sm-12 " *ngFor="let work of getData().WorkExperienceComponent ">
+                        <div class="col-sm-4 ">
+                            <i>
+                                        <b>{{work[labels.start]}} - {{work[labels.end]}}</b>
+                                    </i>
+                        </div>
+                        <div class="col-sm-8 ">
+                            <p>
+                                <b> {{work[labels.speciality]}} </b>
+                            </p>
+                            <p> {{work[labels.place]}}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </md-dialog-content>
+
+</div>
+<div class="flex-container ">
+    <div class="col-sm-3 col-md-3 hidden-xs diff "></div>
+    <md-dialog-actions class="pull-right ">
+        <button md-dialog-close md-button class="btn btn-primary " (click)="download() ">PDF</button>
+        <button md-dialog-close md-button class="pull-right ">CLOSE</button>
+    </md-dialog-actions>
+</div>

@@ -1,0 +1,77 @@
+<div class="body">
+    <div class="container" [ngClass]="{'active':isRegister}">
+        <div class="card"></div>
+        <div class="card">
+            <h1 class="title unselectable">Login</h1>
+            <form [formGroup]="loginForm" (ngSubmit)="loginData(loginForm.value)" autocomplete="off">
+                <div class="input-container">
+                    <input type="text" id="username" class="form-control" formControlName="nameEmail" required="required" />
+                    <label for="username">Email</label>
+                    <div class="bar"></div>
+                    <div class="form-text error" *ngIf="loginForm.controls.nameEmail.touched">
+                        <div *ngIf="loginForm.controls.nameEmail.hasError('required')"> {{ errorMessage }}</div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input type="password" class="form-control" formControlName="password" id="pass" required="required" />
+                    <label for="pass">Password</label>
+                    <div class="bar"></div>
+                    <div class="form-text error" *ngIf="loginForm.controls.password.touched">
+                        <div *ngIf="loginForm.controls.password.hasError('required')"> {{ errorMessage }}</div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-default">Go</button>
+                </div>
+                <div class="footer" (click)="changeRoute('forgot-password')"><a>Forgot password?</a></div>
+            </form>
+        </div>
+        <div class="card alt">
+            <div class="toggle" (click)="openRegister()"></div>
+            <h1 class="title unselectable">Register
+                <div class="close" (click)="isRegister=false; loginForm.reset()"></div>
+            </h1>
+            <form autocomplete="off" [formGroup]="registrationForm" (ngSubmit)="registerData(registrationForm.value)">
+                <div class="input-container">
+                    <input type="text" class="form-control" formControlName="name" id="regname" required="required" />
+                    <label for="regname">Username</label>
+                    <div class="bar"></div>
+                    <div class="form-text error" *ngIf="registrationForm.controls.name.touched">
+                        <div *ngIf="registrationForm.controls.name.hasError('required')"> {{ errorMessage }} </div>
+                        <div *ngIf="registrationForm.controls.name.hasError('invalidUsername')">Username should contain minimum one letter, shouldn't contain whitespaces .</div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input type="text" class="form-control" formControlName="email" id="email" required="required" />
+                    <label for="email">Email</label>
+                    <div class="bar"></div>
+                    <div class="form-text error" *ngIf="registrationForm.controls.email.touched">
+                        <div *ngIf="registrationForm.controls.email.hasError('required')"> {{ errorMessage }} </div>
+                        <div *ngIf="registrationForm.controls.email.hasError('invalidEmail')">Invalid Email format.</div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="regPass" class="form-control" formControlName="password" required="required" />
+                    <label for="regPass">Password</label>
+                    <div class="bar"></div>
+                    <div class='form-text error' *ngIf="registrationForm.controls.password.touched">
+                        <div *ngIf="registrationForm.controls.password.hasError('required')"> {{ errorMessage }} </div>
+                        <div *ngIf="registrationForm.controls.password.hasError('minlength')">Password isn't long enough.</div>
+                        <div *ngIf="registrationForm.controls.password.hasError('invalidPassword')">Password should contain 6-20 symbols (required one letter and one number)</div>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="repeat" class="form-control" formControlName="confirmPassword" required="required" />
+                    <label for="repeat">Repeat Password</label>
+                    <div class="bar"></div>
+                    <div class='form-text error' *ngIf="registrationForm.controls.confirmPassword.touched">
+                        <div *ngIf="registrationForm.hasError('mismatchedPasswords')">Passwords doesn't match.</div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button type="submit" [disabled]="!registrationForm.valid" class="btn btn-default-alter">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

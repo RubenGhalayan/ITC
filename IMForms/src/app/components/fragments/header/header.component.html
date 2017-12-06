@@ -1,0 +1,54 @@
+<!-- Header -->
+<div class="row" id="first-row" *ngIf="!isHome" [ngClass]="{'change': sidenavOpened() }">
+    <div class="col-md-4 col-sm-4 hidden-xs" *ngIf="!isLogin">
+        <h3 id="imforms" class="unselectable" (click)=goHome()>IMForms</h3>
+    </div>
+    <div class="col-md-4 col-sm-4 hidden-xs" *ngIf="isLogin">
+        <h3 id="imforms-login" class="unselectable" (click)=goLogin()>IMForms</h3>
+    </div>
+    <div class="col-md-6 col-sm-6 hidden-xs"></div>
+    <div class="col-md-2 col-sm-2 hidden-xs" *ngIf="!isLogin">
+        <div class="profile">
+            <div id="right-text">
+                <label class="unselectable">{{ (userName.length > 30) ? userName.substr(0, 30) + '...': userName }}</label>
+            </div>
+            <div class="unselectable" id="profile-pic">
+                <div class="dropdown">
+                    <img src="../assets/user.png" alt="View">
+                    <div class="dropdown-content">
+                        <div class="btn-group-vertical">
+                            <button type="button" class="btn btn-change btn-sm" routerLink="create-form" routerLinkActive="active" *ngIf="isForms">New Form</button>
+                            <button type="button" class="btn btn-change btn-sm" (click)=goMyForms() *ngIf="isCreate">My Forms</button>
+                            <button type="button" class="btn btn-change btn-sm" (click)=Logout()>Log out</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mobile version -->
+    <div class="visible-xs">
+        <div class='hamburger-title'>
+            <div *ngIf="isForms || isCreate" (click)="toggleSidenav()" class="hamburger"> <span class="glyphicon glyphicon-menu-hamburger"></span> </div>
+            <h3 id="imforms-mobile" routerLink="home" routerLinkActive="active">IMForms</h3>
+            <div class="profile" *ngIf="!isLogin">
+                <div id="right-text-mobile">
+                    <label class="unselectable">{{ (userName.length > 10) ? userName.substr(0, 10) + '...': userName }}</label>
+                </div>
+                <div id="profile-pic">
+                    <div class="dropdown">
+                        <img id="img-mobile" src="../assets/user.png" alt="View">
+                        <div class="dropdown-content">
+                            <div class="btn-group-vertical" id="dropdown-mobile">
+                                <button type="button" class="btn btn-change btn-sm" routerLink="create-form" routerLinkActive="active" *ngIf="isForms">New Form</button>
+                                <button type="button" class="btn btn-change btn-sm" (click)=goMyForms() *ngIf="isCreate">My Forms</button>
+                                <button type="button" class="btn btn-change btn-sm" (click)=Logout()>Log out</button>
+                                <app-pop-up></app-pop-up>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

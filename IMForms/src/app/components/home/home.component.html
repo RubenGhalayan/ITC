@@ -1,0 +1,52 @@
+<div class="row row-mobile">
+    <!-- Mobile version -->
+    <div class="visible-xs" id="button-area-mobile">
+        <!-- User icon Mobile -->
+        <div id="profile">
+            <div id="profile-pic-mobile" class="dropdown">
+                <img src="../../../assets/user.png" alt="View" />
+                <div class="dropdown-content btn-group-vertical">
+                    <button type="button" class="btn btn-change btn-sm" (click)="Logout()"> Logout</button>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation buttons Mobile -->
+        <div id="button_group-mobile">
+            <button class="btn btn-default-alter btn-md button" type="button" (click)="changeRoute('create-form')"> New Form </button>
+            <button class="btn btn-default-alter btn-md button " type="button" (click)="changeRoute('my-forms')"> My Forms </button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <!-- Demo video -->
+    <div class="col-sm-4 col-md-6 col-xs-12">
+        <div id="video">
+            <vg-player>
+                <vg-overlay-play></vg-overlay-play>
+                <vg-buffering></vg-buffering>
+                <video #media [vgMedia]="media" preload="auto" crossorigin >
+                    <source src="../../../assets/demo.mp4" type="video/mp4" />
+                </video>
+            </vg-player>
+        </div>
+    </div>
+    <div class="col-sm-8 col-md-6 hidden-xs" id="button-area">
+        <!-- User icon -->
+        <div id="profile">
+            <div id="right-text">
+                <label class="unselectable userName">{{userName}}</label>
+            </div>
+            <div id="profile-pic" class="dropdown">
+                <img src="../../../assets/user.png" alt="View" />
+                <div class="dropdown-content btn-group-vertical">
+                    <button type="button" class="btn-change btn btn-sm" (click)="Logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation buttons -->
+        <div id="button_group">
+            <button class="btn btn-default-alter btn-lg button" type="button" (click)="changeRoute('create-form')"> New Form </button>
+            <button class="btn btn-default-alter btn-lg button" type="button" (click)="changeRoute('my-forms')"> My Forms </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<md-sidenav-container>
+    <app-slide-bar [content]="myForm" [otherForms]="sharedForm">
+        <div class="searchDiv" search>
+            <span class="glyphicon glyphicon-search searchIcon"></span>
+            <input type="text" class="search" placeholder="Search form" [(ngModel)]=query (keyup)=filter() /> 
+        </div>
+        <div title class="unselectable">My Forms</div>
+        <div *ngFor="let item of myForm" items>
+            <div class='item unselectable' (click)="addTab(item)"> {{ item.name }} </div>
+        </div>
+        <div other class="unselectable">Shared Forms</div>
+        <div *ngFor="let item of sharedForm" forms>
+            <div class='item unselectable' (click)="addTab(item);"> {{ item.name }} </div>
+        </div>
+    </app-slide-bar>
+    <div class="toolbar" (click)="close()" [ngClass]="{'toolbarToggle':check()}" *ngIf="showArea">
+        <app-toolbar [buttons]="buttons" [direction]="direction" class="pull-right"></app-toolbar>
+        <app-pop-up></app-pop-up>
+    </div>
+    <div class="area" (click)="close()" [ngClass]="{'areaToggle': check(), 'area-before-init': !showArea, 'area-before-init-opened': check() && !showArea}">
+        <p class="text unselectable" *ngIf="!showArea"><span class="glyphicon glyphicon-list-alt" style="margin-right: 10px" [ngClass]="{'textToggle': check() && !showArea}"></span>Select
+            form from left menu</p>
+        <md-tab-group *ngIf="showArea" (selectChange)="tabChange($event)" [(selectedIndex)]="selected">
+            <md-tab *ngFor="let tab of tabs">
+                <ng-template md-tab-label>
+                    <div [contextMenu]="basicMenu" [contextMenuSubject]="tab" class="unselectable tab"> {{tab.title}} </div>
+                </ng-template>
+                <div class="unPublish pull-right">
+                    <md-slide-toggle class="switch" [checked]="value !== 'unPublished'" (change)="unPublished()">
+                        <span *ngIf="value === 'unPublished'" class="status">Publish</span>
+                        <span *ngIf="value !== 'unPublished'" class="status">UnPublish</span>
+                    </md-slide-toggle>
+                </div>
+
+                <div *ngIf="value != 'unPublished'" class="url pull-right">
+                    <p class="unselectable">Your form published at this address</p>
+                    <div class="input-group">
+                        <span class="input-group-addon glyphicon glyphicon-link" (click)='copyToClipboard()'></span>
+                        <input type="text" class="form-control" [(ngModel)]='url' id='copy' readonly>
+                        <span class="input-group-btn">
+                </span>
+                    </div>
+                </div>
+
+                <div class="col-sm-10 col-xs-12 table-area">
+                    <app-data-table [(info)]='info' [(data)]='tab.data' [(id)]='tab.formId' ></app-data-table>
+                </div>
+            </md-tab>
+        </md-tab-group>
+        <context-menu>
+            <ng-template contextMenuItem (execute)="remove($event.item)">
+                Close tab
+            </ng-template>
+        </context-menu>
+    </div>
+</md-sidenav-container>

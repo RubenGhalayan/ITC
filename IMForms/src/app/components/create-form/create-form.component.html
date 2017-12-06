@@ -1,0 +1,34 @@
+<!-- Workspace -->
+<md-sidenav-container>
+    <app-slide-bar [content]="elements" [otherForms]="savedForms" [open]="'isMobile'">
+        <div title class="unselectable">Form elements</div>
+        <div [dragula]="'first-bag'" id="drag-container" items>
+            <div class="item unselectable" *ngFor="let item of elements" [ngClass]="{'draged': dragged}"><span class="{{item.icon}}" style="margin-right: 10px"></span> {{item.name}}</div>
+        </div>
+        <div other class="unselectable">Saved Forms</div>
+        <div class="searchDiv" forms>
+            <span class="glyphicon glyphicon-search searchIcon"></span>
+            <input type="text" class="search" placeholder="Search in saved forms" [(ngModel)]=query (keyup)=filter() />        
+        </div>
+        <div *ngFor="let form of forms" forms>
+            <div class='item unselectable' (click)="editForm(form)"> {{ form.title }} </div>
+        </div>
+    </app-slide-bar>
+    <div class="toolbar" *ngIf='dropped.length != 0' (click)="close()" [ngClass]="{'toolbarToggle':check()}">
+        <app-toolbar [buttons]="buttons" [direction]="direction" class="pull-right"></app-toolbar>
+    </div>
+    <div [ngBusy]="busy"></div>
+    <div class="area drop-area" (click)="close()" [ngClass]="{'areaToggle': check(), 'free': dropped.length === 0, 'freeToggle': check() && dropped.length === 0 }">
+        <div class="col-sm-8 col-md-8 col-xs-10 head">
+            <label style="cursor: text" class="titleForm" contenteditable [(contenteditableModel)]="title" (contenteditableModelChange)="updateTitle($event)"> {{ title }} </label>
+            <hr/>
+            <!-- Screen version -->
+            <div class='canvas'  [ngClass]="{'drag': containerEmpty() }" id="no-drop" #noDrop [dragula]="'first-bag'">
+                <p *ngIf="containerEmpty()" id="text" class="remove unselectable" name="remove"><span class="glyphicon glyphicon-move" id="icon"></span>Drag component here from left menu</p>
+                <ng-template appForms></ng-template>
+            </div>
+            <div id="dropArea"></div>
+            <app-pop-up></app-pop-up>
+        </div>
+    </div>
+</md-sidenav-container>

@@ -1,0 +1,15 @@
+<md-sidenav #sidenav align="left" [mode]="isDesktop() ? 'side' : 'over'" [opened]="isDesktop()" disableClose=true>
+    <div *ngIf="content">
+        <ng-content select='[search]'> </ng-content>
+        <div class="title">
+            <ng-content select='[title]'></ng-content>
+        </div>
+        <ng-content select='[items]'> </ng-content>
+    </div>
+    <div *ngIf="otherForms.length > 0">
+        <div class="title">
+            <ng-content select='[other]'></ng-content>
+        </div>
+        <ng-content select='[forms]'> </ng-content>
+    </div>
+</md-sidenav>

@@ -1,0 +1,52 @@
+@import "../../../assets/styles/bootstrap-custom/custom-variables.less";
+
+.body {
+    background: url("../../../assets/login_background.jpg") no-repeat center fixed;
+    height: 100vh;
+    width: 100%;
+    display: table;
+    background-size: cover;
+    padding: 30px 0;
+}
+
+.blank {
+    background: white;
+    padding: 30px;
+    padding-bottom: 80px;
+    margin-right: 30px;
+    margin-left: 25%;
+    min-width: 300px;
+    min-height: 100%;
+    width: 50%;
+    position: relative;
+    box-shadow: 0 5px 40px 2px rgba(60, 60, 60, 0.2), 0 6px 20px 0 rgba(60,     60, 60, 0.19);
+}
+
+.submit {
+    bottom: 40px;
+    right: 30px;
+    margin-top: 20px;
+    position: absolute;
+}
+
+.copyright {
+    bottom: 10px;
+    right: 30px;
+    position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+    .blank {
+        width: 100%;
+        margin: 0;
+    }
+
+    .body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+}

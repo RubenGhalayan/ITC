@@ -1,0 +1,89 @@
+@import "../../../assets/styles/bootstrap-custom/custom-variables.less";
+
+
+.table-area {
+    margin: 2% 2% 0 10%;
+    overflow-x: scroll;
+}
+
+.url {
+    width: 30%;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.tab {
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 320px) {
+    .table-area {
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .url {
+        width: 50%;
+    }
+}
+
+  .unPublish {
+      margin-top: 50px;
+      margin-right: 7%;
+  }
+  
+  .status {
+    margin-top: -10%;
+    opacity: 0;
+    padding-left:0; 
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .unPublish:hover .status {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .glyphicon {
+      cursor: pointer;
+  }
+.search {
+    background-color: #222222;
+    color: @gray-lighter;
+    width: 88%;
+    margin: 6%;
+    padding: 3%;
+    padding-left: 18%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.search::placeholder {
+    color: #555555;
+}
+
+.glyphicon-search {
+    color: @gray-lighter;
+}
+
+.searchDiv {
+    display: flex;
+}
+
+.searchIcon {
+    cursor: auto;
+    margin-top: 9%;
+    margin-left: 10%;
+    margin-right: -16%;    
+}

@@ -1,0 +1,72 @@
+@import "../../../../assets/styles/bootstrap-custom/custom-variables.less";
+
+.out {
+	margin: -24px 0px 0 -24px;
+}
+
+.flex-container {
+	-webkit-flex-direction: row-reverse;
+	flex-direction:         row-reverse;
+	-webkit-align-items: stretch;
+	align-items:         stretch;
+}
+
+.info {
+	padding: 24px;
+	min-height: 60vh;
+	background-color: #00696c;
+	color: white;
+	flex: 1;
+	height: 100%
+}
+
+.element {
+	font-size: @font-size-base;
+}
+
+.sector {
+	margin: 10px;
+    margin-bottom: 24px;
+}
+
+.description {
+	color: #999;
+}
+
+.element-title {
+	font-size: @font-size-base * 1.2;
+}
+
+.data {
+    display: block;
+    margin-left: 10px;
+	padding-top: 15px;
+}
+
+.diff {
+	height: 84px;
+    background-color: #00696c;
+	margin: -24px 0 -60px -26px;
+	flex: 1;	
+}
+.label-range {
+	font-size: 10px;
+}
+
+@media screen and (max-width: 769px) {
+    .out {
+        margin-bottom: 5px;
+        margin-right: -10px;
+    }
+
+    .diff {
+        margin-left: -24px;
+	}
+	.label-range {
+		font-size: 8px;
+	}
+
+}
+
+
+

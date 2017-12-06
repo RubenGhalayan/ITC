@@ -1,0 +1,11 @@
+<div class="body">
+    <div class="blank">
+        <label class="titleForm unselectable"> {{ title }} </label>
+        <hr/>
+        <form [formGroup]="fg" (ngSubmit)="submited(fg.value)">
+            <ng-container appForms></ng-container>
+            <button type="submit" class="btn btn-primary btn-sm submit">Submit</button>
+        </form>
+    </div>
+    <div class="copyright unselectable">Copyright <span class="glyphicon glyphicon-copyright-mark"></span> {{ year }} | Designed by ITC IMForms team </div>
+</div>

@@ -1,0 +1,82 @@
+<h5 class="titleForm unselectable">Schedule for {{ data.title['form'].title || 'your form'  }}</h5>
+<hr>
+<md-dialog-content >
+    <md-slide-toggle class="switch" labelPosition="before" (change)="onChange($event)">Card View</md-slide-toggle>
+    <button class="btn btn-primary pull-right" (click)="exportToPdf()"><span class="glyphicon glyphicon-export"></span>Export to pdf</button>
+    <button class="btn btn-primary pull-right" (click)="sendMessage()"><span class="glyphicon glyphicon-envelope"></span>Send email</button>
+
+    <div *ngIf="groups.length > 0">
+        <md-list *ngIf="isListView">
+            <div *ngFor="let group of groups | keys let i = index">
+                <h1 mdSubheader class="mat-subheader"> {{ keys[i] }}</h1>
+                <div id="container">
+                    <md-list-item class='list-item' *ngFor='let item of groups[group.key]' id='draggable'>
+                        <div class='unselectable flex-container left'>
+                            <md-checkbox [checked]="checked(item)" (change)='updateSelected(item)' class="checkbox"></md-checkbox>
+                            <p class="person" (click)='updateSelected(item)' > {{ item[labels['name']?.firstName.label] }} {{ item[labels['name']?.lastName.label] }}</p>
+                        </div>
+                    </md-list-item>
+                </div>
+                <md-divider></md-divider>
+            </div>
+        </md-list>
+
+        <div class="flex-container">
+            <div *ngFor="let group of groups | keys let i = index">
+                <md-card *ngIf="!isListView">
+                    <md-card-title> {{ keys[i] }} </md-card-title>
+                    <md-card-content class='card-content' id="container">
+                        <div *ngFor="let item of groups[group.key]">
+                            <div  class="unselectable mat-card-item flex-container left">
+                                <md-checkbox [checked]="checked(item)" (change)='updateSelected(item)' class="checkbox"></md-checkbox>
+                                <p class="person" (click)='updateSelected(item)'> {{ item[labels['name']?.firstName.label] }} {{ item[labels['name']?.lastName.label]}} </p>
+                            </div>
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="groups.length === 0">
+        <md-list *ngIf="isListView" class='unselectable'>
+            <div *ngFor="let group of groups | keys let i = index">
+                <h1 mdSubheader class="mat-subheader"> {{ keys[i] }} </h1>
+                <div >
+                    <md-card-content *ngFor='let item of groups[group.key] | keys let i = index'>
+                        <label class='time' #dontDrag> {{ item.key }}</label>
+                        <div class='mat-list-item'>
+                            <div class='list-item unselectable flex-container left' *ngFor='let time of groups[group.key][item.key]'>
+                                <md-checkbox [checked]="checked(time)" (change)='updateSelected(time)' class="checkbox"></md-checkbox>
+                                <p class="person" (click)='updateSelected(time)'> {{ time[labels['name']?.firstName.label] }}  {{ time[labels['name']?.lastName.label] }}</p>
+                            </div>
+                        </div>
+                    </md-card-content>
+                </div>
+                <md-divider></md-divider>
+            </div>
+        </md-list>
+
+        <div class="flex-container">
+            <div *ngFor="let group of groups | keys let i = index">
+                <md-card *ngIf="!isListView">
+                    <md-card-title> {{ keys[i] }} </md-card-title>
+                    <div class="card-content">
+                        <md-card-content *ngFor='let item of groups[group.key] | keys let i = index'>
+                            <label class="time"> {{ item.key }} </label>
+                            <div id="container">
+                                <div class='mat-card-item unselectable flex-container left' *ngFor='let time of groups[group.key][item.key]'>
+                                    <md-checkbox [checked]="checked(time)" (change)='updateSelected(time)' class="checkbox"></md-checkbox>
+                                    <p class="person" (click)='updateSelected(time)'> {{ time[labels['name']?.firstName.label] }}  {{ time[labels['name']?.lastName.label] }}</p>
+                                </div>
+                            </div>
+                        </md-card-content>
+                    </div>
+                </md-card>
+            </div>
+        </div>
+    </div>
+</md-dialog-content>
+<md-dialog-actions class="pull-right actions">
+    <button md-button class="btn btn-default-alter" md-dialog-close tabindex="-1">Cancel</button>
+</md-dialog-actions>

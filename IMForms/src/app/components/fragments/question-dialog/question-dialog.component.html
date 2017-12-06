@@ -1,0 +1,9 @@
+<label class=" unselectable customTitle">{{ title }}</label>
+<hr>
+<div class="dialog-content">
+    <span class="unselectable">{{ message }}</span>
+</div>
+<div class="pull-right button-container">
+    <button class="btn btn-default customBtn" md-dialog-close tabindex="-1">No</button>
+    <button class="btn btn-default customBtn" [md-dialog-close]="true" tabindex="1">Yes</button>
+</div>
